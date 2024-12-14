@@ -1,0 +1,29 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Translator{% endblock %}
+
+
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>    
+
+<h1>Translate to Finnish</h1>
+    <form method="POST">
+        <div class="input-group">
+            <textarea type="text" id="text" name="text" placeholder="Enter text (English)" required></textarea>
+            <input type="submit" value="Translate">
+        </div>
+        <div id="char-count">0 / 2000</div><br><br>
+    </form>
+
+    <div class="loading-text" 
+        id="loading" style="display:none;">Translating...
+    </div>
+
+    {% if translated_text %}
+    <div class="translated-text">
+        <p>{{ translated_text|safe }}</p>
+    </div>
+    {% endif %}
+{% endblock %}
