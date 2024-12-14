@@ -18,8 +18,8 @@ You need python 3.6+ and pip for this.
 # Steps
 ## 1. Clone the repository
 
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/koster1/translator_app.git
+    cd translator_app
 
 ## 2. Set up a virtual environment (optional but recommended)
 
